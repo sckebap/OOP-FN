@@ -123,20 +123,24 @@ public class GameEngine implements KeyListener, GameReporter {
 			er = e.getRectangle();
 			if (er.intersects(vr)) {
 				gp.sprites.remove(v);
-				v.isAlive = false;
+				v.die();
 				if (v2.isAlive == false && v.isAlive == false){
 					die();
-					JOptionPane.showMessageDialog(null, "PLAYER 1 WIN :" + getScore());
-				}
+					if(getScore() > getScore2())
+						JOptionPane.showMessageDialog(null, "PLAYER 2 WIN :" + getScore2());
+					else
+						JOptionPane.showMessageDialog(null, "PLAYER 2 WIN :" + getScore2());				}
 				return;
 			}
 			if (er.intersects(vr2)) {
-				v2.isAlive = false;
+				v2.die();
 				gp.sprites.remove(v2);
 				if (v2.isAlive == false && v.isAlive == false){
 					die();
-					JOptionPane.showMessageDialog(null, "PLAYER 2 WIN :" + getScore2());
-
+					if(getScore() > getScore2())
+						JOptionPane.showMessageDialog(null, "PLAYER 2 WIN :" + getScore2());
+					else
+						JOptionPane.showMessageDialog(null, "PLAYER 2 WIN :" + getScore2());
 				}
 				return;
 			}
