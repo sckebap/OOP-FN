@@ -8,9 +8,9 @@ import javax.sound.sampled.Clip;
 
 public class Sound {
 
-    public void playSound() {
+    public void playSound(String soundName) {
 		try {
-            String soundName = "f2/spw/1.wav";    
+            //String soundName = "f2/spw/1.wav";    
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);

@@ -145,13 +145,13 @@ public class GameEngine implements KeyListener, GameReporter {
 		for (Coin c : coins) {
 			cr = c.getRectangle();
 			if (cr.intersects(vr)) {
-				sound.playSound();
+				sound.playSound("f2/spw/1.wav");
 				score += 300;
 				return;
 			}
 
 			if (cr.intersects(vr2)) {
-				sound.playSound();
+				sound.playSound("f2/spw/1.wav");
 				score2 += 300;
 				return;
 			}

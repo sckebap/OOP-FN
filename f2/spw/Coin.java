@@ -3,7 +3,7 @@ package f2.spw;
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics2D;
-//12
+
 public class Coin extends Sprite{
 	public static final int Y_TO_FADE = 400;
 	public static final int Y_TO_DIE = 600;
