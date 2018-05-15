@@ -126,8 +126,7 @@ public class GameEngine implements KeyListener, GameReporter {
 				v.isAlive = false;
 				if (v2.isAlive == false && v.isAlive == false){
 					die();
-					JOptionPane.showMessageDialog(null, "PLAYER 1 WIN :" + getScor
-					e());
+					JOptionPane.showMessageDialog(null, "PLAYER 1 WIN :" + getScore());
 				}
 				return;
 			}
